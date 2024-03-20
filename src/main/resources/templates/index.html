@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Pagina index</h1>
+    <h2>Formulario</h2>
+    <form action="" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="text" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Iniciar sesión">
+    </form>
+    <div th:if="${msg != null}">
+        <img src="/img/alert.jpg" alt="alerta">
+        <p th:text="${msg}"></p>
+    </div>
+    <button id="btnPedirDatos">Pedir datos</button>
+    <ul id="lista">
+    </ul>
+    <hr/>
+    <label for="idalumno">Id alumno</label>
+    <input type="number" name="" id="idalumno">
+    <br>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="" id="nombre">
+    <br>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" name="" id="apellidos">
+    <br>
+    <label for="edad">Edad</label>
+    <input type="number" name="" id="edad">
+    <br>
+    <button id="btnEnviarAlumno">Enviar Alumno</button>
+</div>
+</body>
+</html>
